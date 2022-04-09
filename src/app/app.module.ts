@@ -1,26 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core"
+import { BrowserModule } from "@angular/platform-browser"
 
-import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { TimerService } from './timer.service';
-import { DOCUMENT, SET_INTERVAL } from './tokens';
+import { AppComponent } from "./app.component"
+import { PlaceEditDialogModule } from "./ui/place-edit-dialog/place-edit-dialog.module"
+import { ShellModule } from "./ui/shell/shell.module"
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent],
-  bootstrap: [AppComponent],
-  providers: [
-    TimerService,
-    {
-      provide: DOCUMENT,
-      useValue: document,
-    },
-    {
-      provide: SET_INTERVAL,
-      useValue: setInterval,
-    },
+  declarations: [
+    AppComponent
   ],
+  imports: [
+    BrowserModule,
+    ShellModule,
+    PlaceEditDialogModule
+  ],
+  providers: [],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule {
+}
