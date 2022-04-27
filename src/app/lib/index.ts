@@ -1,2 +1,3 @@
 export * from "./leaflet"
-export * from "./angular"
+export * from "./image"
+export * from "./geolocation"

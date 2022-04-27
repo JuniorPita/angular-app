@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  justify-content: space-between;
+}
+
+:host-context(.is-disabled) {
+  opacity: 0.5;
+}
+
+.tag-name-input {
+  font: inherit;
+  padding: 0;
+  border: 0;
+  background: 0;
+}
+
+.close {
+  padding: 5px;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(0deg 0% 0% / 17%);
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+}

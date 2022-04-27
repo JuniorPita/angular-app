@@ -7,13 +7,23 @@
   background: none;
   padding: 0;
   margin: 0;
+  color: hsl(0, 0%, 83%);
 }
 
 .star-button .icon-image {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .star-button.is-selected {
   color: hsl(45deg 100% 51%);
+}
+
+.star-button.is-selected[disabled] {
+  color: hsl(60, 0%, 46%);
 }
